@@ -15,7 +15,7 @@ export const PlakaterStyled = styled.div`
     display: flex;
     gap: 2.5rem;
   }
-
+ 
   section {
     flex-grow: 1;
   }

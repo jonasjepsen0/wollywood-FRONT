@@ -12,7 +12,7 @@ export const PosterCardStyled = styled.article`
     text-decoration: none;
     color: ${({ theme }) => theme.colors.text};
   }
-
+ 
   img {
     display: block;
     width: 100%;

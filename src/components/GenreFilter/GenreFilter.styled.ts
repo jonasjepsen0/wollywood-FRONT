@@ -33,3 +33,4 @@ export const GenreFilterStyled = styled.aside`
     color: ${({ theme }) => theme.colors.primary};
   }
 `
+

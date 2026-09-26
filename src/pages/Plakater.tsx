@@ -21,7 +21,7 @@ export const Plakater = () => {
   const valgtePlakater = genre
     ? posters.filter((poster) => poster.genres.some((item) => item.genre.id === genre.id))
     : posters
-
+ 
   return (
     <PlakaterStyled>
       <h1>Plakater</h1>
