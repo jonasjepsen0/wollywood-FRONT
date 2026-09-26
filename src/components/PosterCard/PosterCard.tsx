@@ -1,4 +1,5 @@
 import { Link } from 'react-router-dom'
+import { useCart } from '../../hooks/useCart'
 import { PosterCardStyled } from './PosterCard.styled'
 
 type PosterCardProps = {
@@ -9,6 +10,8 @@ type PosterCardProps = {
 }
 
 export const PosterCard = ({ id, name, image, price }: PosterCardProps) => {
+  const { addToCart } = useCart()
+
   return (
     <PosterCardStyled>
       <Link to={`/plakat/${id}`}>
@@ -18,7 +21,9 @@ export const PosterCard = ({ id, name, image, price }: PosterCardProps) => {
 
       <p>Kr. {price}</p>
 
-      <button type="button">Læg i kurv</button>
+      <button type="button" onClick={() => addToCart({ id, name, image, price })}>
+        Læg i kurv
+      </button>
     </PosterCardStyled>
   )
 }
