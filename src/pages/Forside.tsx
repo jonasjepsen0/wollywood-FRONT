@@ -16,7 +16,7 @@ export const Forside = () => {
     <ForsideStyled>
       <img className="forhaeng" src={curtain} alt="" />
 
-      <h1>Fire tilfældige...</h1>
+      <h1>Fire tilfældige</h1>
 
       <div className="gitter">
         {posters.slice(0, 4).map((poster) => (
