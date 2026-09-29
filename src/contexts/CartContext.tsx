@@ -37,6 +37,7 @@ export const CartContextProvider = ({ children }: ProviderProps) => {
   }
 
   const removeFromCart = (id: number) => {
+    //.filter returnerer et nyt array med alle varer hvor item.id ikke er lige med id
     setItems(items.filter((item) => item.id !== id))
   }
 

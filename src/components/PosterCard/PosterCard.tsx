@@ -10,6 +10,7 @@ type PosterCardProps = {
 }
 
 export const PosterCard = ({ id, name, image, price }: PosterCardProps) => {
+  //addToCart destructures af useCart() hooket, henter objekt
   const { addToCart } = useCart()
 
   return (

@@ -8,10 +8,17 @@ export const PosterPreviewStyled = styled.article`
     flex-shrink: 0;
     align-self: flex-start;
     width: 141px;
+    height: 212px;
+    object-fit: contain;
   }
 
   .tekst {
     flex-grow: 1;
+  }
+
+  .tekst > div {
+  max-height: 84px;
+  overflow: hidden;
   }
 
   h2 {

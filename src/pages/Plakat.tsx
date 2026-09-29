@@ -7,9 +7,11 @@ import type { Poster } from '../types/Api'
 import { PlakatStyled } from './Plakat.styled'
 
 export const Plakat = () => {
+  //posterId destructures ud af useParams() hooket
   const { posterId } = useParams()
   const { addToCart } = useCart()
-
+  
+  //useFetch kaldes med endpointet hvor posterId sættes ind i URLen med en template literal
   const { data: poster } = useFetch<Poster>(`${API_URL}/api/posters/${posterId}`)
 
   if (!poster) {

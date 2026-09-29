@@ -19,6 +19,7 @@ export const Plakater = () => {
   const genre = genres.find((item) => item.id === Number(genreId))
 
   const valgtePlakater = genre
+    // .filter() beholder plakater hvor .some() finder en genre med det valgte id
     ? posters.filter((poster) => poster.genres.some((item) => item.genre.id === genre.id))
     : posters
  
@@ -33,6 +34,7 @@ export const Plakater = () => {
           <h2>{genre ? genre.title : 'Alle plakater'} - {valgtePlakater.length} plakater</h2>
 
           <div className="gitter">
+            {/*.map() laver PosterCard ud af hver plakat i listen*/}
             {valgtePlakater.map((poster) => (
               <PosterCard
                 key={poster.id}

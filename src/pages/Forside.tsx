@@ -6,6 +6,7 @@ import type { Poster } from '../types/Api'
 import { ForsideStyled } from './Forside.styled'
 
 export const Forside = () => {
+  // useFetch hook kaldes med endpointet og data omdøbes til posters i destructuring
   const { data: posters } = useFetch<Poster[]>(`${API_URL}/api/posters`)
 
   if (!posters) {
@@ -19,7 +20,7 @@ export const Forside = () => {
       <h1>Fire tilfældige</h1>
 
       <div className="gitter">
-        {posters.slice(0, 4).map((poster) => (
+        {[...posters].sort(() => Math.random() - 0.5).slice(0, 4).map((poster) => (
           <PosterPreview
             key={poster.id}
             id={poster.id}
